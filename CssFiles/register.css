@@ -1,0 +1,75 @@
+/* Background settings */
+body {
+    background-image: url("{% static 'images/register-bg.jpg' %}"); /* Replace 'register-bg.jpg' with your image name */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Center box style */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.register-box {
+    background: rgba(255, 255, 255, 0.85); /* Semi-transparent background */
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    text-align: center;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #4CAF50;
+}
+
+/* Button styling */
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* Title styling */
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+    font-size: 24px;

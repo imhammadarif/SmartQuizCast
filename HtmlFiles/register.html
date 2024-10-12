@@ -1,0 +1,160 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!--<link rel="stylesheet" href="{% static 'css/register.css' %}">-->
+
+    <style>
+        /* Body Styles */
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGVkdWNhdGlvbnxlbnwwfHx8fDE2MjQwODMyODk&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Container for Registration Form (Ensuring Center Alignment) */
+        
+        .register-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 45px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+        }
+        /* Header Styling */
+        
+        .register-box h1 {
+            color: #f7c02c;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            text-align: center;
+            /* Adjusted for smaller containers */
+        }
+        /* Form Field Styling */
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            /* Reduced gap for compact view */
+        }
+        
+        input {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+        
+        input:focus {
+            border-color: #f7c02c;
+        }
+        /* Button Styling */
+        
+        .btn {
+            padding: 10px 20px;
+            background-color: #f7c02c;
+            color: black;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+        .btn:hover {
+            background-color: #ffdd57;
+        }
+        /* Error Message Styling */
+        
+        .error {
+            background-color: rgba(255, 0, 0, 0.1);
+            color: #ff7373;
+            padding: 8px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="register-container">
+        <div class="register-box">
+            <h1>Join Smart Quiz Cast</h1>
+
+            <!-- Form for registration -->
+            <form method="POST">
+                {% csrf_token %}
+
+                <!-- Display Django form fields -->
+                <div class="form-group">
+                    {{ form.username.label_tag }}
+                    <!-- Label for username -->
+                    {{ form.username }}
+                    <!-- Username input field -->
+                    {% if form.username.errors %}
+                    <!-- Display any errors for this field -->
+                    <div class="error">{{ form.username.errors }}</div>
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.email.label_tag }}
+                    <!-- Label for email -->
+                    {{ form.email }}
+                    <!-- Email input field -->
+                    {% if form.email.errors %}
+                    <!-- Display any errors for this field -->
+                    <div class="error">{{ form.email.errors }}</div>
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.password1.label_tag }}
+                    <!-- Label for password -->
+                    {{ form.password1 }}
+                    <!-- Password input field -->
+                    {% if form.password1.errors %}
+                    <!-- Display any errors for this field -->
+                    <div class="error">{{ form.password1.errors }}</div>
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.password2.label_tag }}
+                    <!-- Label for confirm password -->
+                    {{ form.password2 }}
+                    <!-- Confirm password input field -->
+                    {% if form.password2.errors %}
+                    <!-- Display any errors for this field -->
+                    <div class="error">{{ form.password2.errors }}</div>
+                    {% endif %}
+                </div>
+
+                <!-- Catch any non-field errors (general form validation errors) -->
+                {% if form.non_field_errors %}
+                <div class="error">{{ form.non_field_errors }}</div>
+                {% endif %}
+
+                <!-- Submit button -->
+                <button type="submit" class="btn">Create Account</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

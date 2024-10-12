@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    color: #000080;
+    margin-bottom: 30px;
+}
+
+.selection-section {
+    margin: 20px;
+}
+
+label {
+    font-size: 18px;
+    color: #1640D6;
+}
+
+select {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #1640D6;
+    color: #000080;
+}
+
+select:hover {
+    border-color: #000080;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* General styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* Header with buttons */
+
+.header {
+    background-color: #4CAF50;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-btn {
+    background-color: white;
+    color: #4CAF50;
+    border: 2px solid #4CAF50;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.header-btn:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+/* Selection sections */
+
+.selection-section {
+    margin-bottom: 20px;
+}
+
+.selection-section label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.selection-section select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}

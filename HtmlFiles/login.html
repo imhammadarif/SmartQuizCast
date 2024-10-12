@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Body Styles */
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGVkdWNhdGlvbnxlbnwwfHx8fDE2MjQwODMyODk&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Container for Login Form */
+        
+        .login-container {
+            background-color: rgba(0, 0, 0, 0.8);
+            /* Darker background */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+            text-align: center;
+            color: white;
+        }
+        /* Header Styling */
+        
+        .login-box h1 {
+            color: #f7c02c;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        /* Form Field Styling */
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        input {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+        
+        input:focus {
+            border-color: #f7c02c;
+        }
+        /* Button Styling */
+        
+        .btn {
+            padding: 10px 20px;
+            background-color: #f7c02c;
+            color: black;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+        .btn:hover {
+            background-color: #ffdd57;
+        }
+        /* Error Message Styling */
+        
+        .error {
+            background-color: rgba(255, 0, 0, 0.1);
+            color: #ff7373;
+            padding: 8px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+        /* Link Styling */
+        
+        a {
+            color: #f7c02c;
+            text-decoration: underline;
+        }
+        
+        a:hover {
+            color: #ffdd57;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Login to Smart Quiz Cast</h1>
+
+            <form method="POST">
+                {% csrf_token %}
+
+                <div class="form-group">
+                    {{ form.username.label_tag }}
+                    <!-- Label for username -->
+                    {{ form.username }}
+                    <!-- Username input field -->
+                    {% if form.username.errors %}
+                    <!-- Display any errors for this field -->
+                    <div class="error">{{ form.username.errors }}</div>
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.password.label_tag }}
+                    <!-- Label for password -->
+                    {{ form.password }}
+                    <!-- Password input field -->
+                    {% if form.password.errors %}
+                    <!-- Display any errors for this field -->
+                    <div class="error">{{ form.password.errors }}</div>
+                    {% endif %}
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn">Login</button>
+            </form>
+
+            <!-- Link to register page -->
+            <p>Don't have an account? <a href="{% url 'register' %}">Sign up here</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

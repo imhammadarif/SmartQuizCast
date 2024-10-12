@@ -1,0 +1,235 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Learning Platform</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+        
+        header {
+            background-color: #f7c02c;
+            padding: 10px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            /* Adjusted to space between */
+            align-items: center;
+            /* Center items vertically */
+            padding: 15px 20px;
+            /* Added padding */
+            background-color: #333;
+        }
+        
+        nav a {
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+        }
+        
+        nav a:hover {
+            text-decoration: underline;
+        }
+        
+        .search-section {
+            display: flex;
+            /* Flexbox for search input and button */
+            align-items: center;
+            /* Center vertically */
+        }
+        
+        .search-section input {
+            padding: 10px;
+            width: 200px;
+            /* Fixed width */
+            margin-right: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        
+        .search-section button {
+            padding: 10px 20px;
+            background-color: #f7c02c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .hero {
+            background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b') no-repeat center center/cover;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero h2 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        
+        .features {
+            padding: 50px;
+            display: flex;
+            justify-content: space-around;
+            background-color: #f9f9f9;
+        }
+        
+        .feature-box {
+            width: 30%;
+            text-align: center;
+        }
+        
+        .feature-box i {
+            font-size: 3rem;
+            color: #f7c02c;
+        }
+        
+        .courses-section {
+            padding: 50px;
+            text-align: center;
+        }
+        
+        .course-box {
+            width: 30%;
+            margin: 0 10px;
+            display: inline-block;
+        }
+        
+        .course-box img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        .course-box h3 {
+            font-size: 1.5rem;
+            margin-top: 15px;
+        }
+        
+        .course-box p {
+            margin: 10px 0;
+        }
+        
+        .footer {
+            background-color: #222;
+            padding: 50px 0;
+            color: white;
+            text-align: center;
+        }
+        
+        .footer .links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        
+        .footer .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Smart Quizcast</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#courses">Courses</a>
+            <a href="#about">About</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <input type="text" placeholder="Enter a keyword">
+            <button>Search</button>
+        </section>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Learning that Shapes Your Future</h2>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature-box">
+            <i class="fas fa-book"></i>
+            <h3>High-Quality Courses</h3>
+            <p>Explore a wide range of top-notch courses designed by professionals.</p>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-laptop"></i>
+            <h3>Learn Anytime, Anywhere</h3>
+            <p>Access your course materials from anywhere in the world, at any time.</p>
+        </div>
+        <div class="feature-box">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Expert Instructors</h3>
+            <p>Learn from the best in the industry with years of teaching experience.</p>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses-section" id="courses">
+        <h2>Recent Courses</h2>
+        <div class="course-box">
+            <img src="https://via.placeholder.com/300" alt="Course Image">
+            <h3>Course 1</h3>
+            <p>Chemistry</p>
+            <button>Enroll Now</button>
+        </div>
+        <div class="course-box">
+            <img src="https://via.placeholder.com/300" alt="Course Image">
+            <h3>Course 2</h3>
+            <p>Physics</p>
+            <button>Enroll Now</button>
+        </div>
+        <div class="course-box">
+            <img src="https://via.placeholder.com/300" alt="Course Image">
+            <h3>Course 3</h3>
+            <p>Biology</p>
+            <button>Enroll Now</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Smart Quizcast. All Rights Reserved.</p>
+        <div class="links">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Smart Quizcast</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGVkdWNhdGlvbnxlbnwwfHx8fDE2MjQwODMyODk&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center/cover;
+            height: 100vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #f7c02c;
+        }
+        
+        p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            color: #f0e5d6;
+        }
+        
+        .cta-btn {
+            padding: 12px 30px;
+            background-color: #f7c02c;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background-color 0.3s ease-in-out;
+            font-size: 1.2rem;
+        }
+        
+        .cta-btn:hover {
+            background-color: #ffdd57;
+        }
+        
+        footer {
+            margin-top: 20px;
+            color: #e0dfdf;
+        }
+        
+        footer a {
+            color: #f7c02c;
+            text-decoration: underline;
+        }
+        
+        footer a:hover {
+            color: #ffdd57;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to Smart Quizcast</h1>
+        <p>Welcome to Smart Quizcast! Start your learning journey today and achieve your goals with ease.</p>
+        <a href="/register" class="cta-btn">Get Started</a>
+        <footer>
+            <p>Already have an account? <a href="/login">Login here</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>
